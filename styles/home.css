@@ -1,0 +1,116 @@
+/* ACA SE DEFINE EL EFECTO PARALAX */
+
+section.paralax {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section.paralax::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 80px;
+    background: linear-gradient(to top, rgb(193, 201, 255), transparent);
+    z-index: 12;
+}
+
+section.paralax img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+    z-index: 1;
+}
+
+
+/* section.paralax img#calle {
+    top: -10px;
+    z-index: 100;
+} */
+
+section.paralax img#roca {
+    z-index: 9;
+}
+
+section.paralax img#edicios {
+    top: 5%;
+    z-index: 0;
+}
+
+section.paralax img#avion_1 {
+    top: 36%;
+    left: -30%;
+}
+
+section.paralax img#avion_2 {
+    top: -15%;
+    left: 10%;
+}
+
+#text {
+    left: 10%;
+    position: absolute;
+    color: #fff;
+    white-space: nowrap;
+    font-size: 4.5vw;
+    z-index: 2;
+    background-color: var(--morado);
+    transform: translateY(50px);
+}
+
+#btn {
+    text-decoration: none;
+    display: inline-block;
+    padding: 5px 20px;
+    border-radius: 40px;
+    background: #fff;
+    color: #000;
+    font-size: 1.5vw;
+    z-index: 9;
+    opacity: 0.8;
+    transform: translateY(-30px);
+}
+
+.sec {
+    position: relative;
+    padding: 100px;
+    z-index: 8;
+    background: var(--blue);
+    /* background: #fff; */
+}
+
+.sec::after {
+    z-index: 1;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background: linear-gradient(to bottom, rgb(193, 201, 255), transparent);
+}
+
+.sec h2 {
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--white);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.sec p {
+    font-size: 25px;
+    font-weight: 400;
+    color: #000;
+    line-height: 1.2;
+}

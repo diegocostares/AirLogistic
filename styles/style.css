@@ -1,0 +1,157 @@
+:root {
+    /*Paleta de Colores*/
+    --brandColor: rgb(0, 136, 255);
+    --background: rgb(247, 247, 247);
+    --textDark: hsla(0, 0%, 0%, 0.66);
+    --textLight: hsla(0, 0%, 0%, 0.33);
+    --blue: linear-gradient(140deg, rgba(93, 98, 163, 1) 50%, rgb(0, 136, 255) 100%);
+    --blue-background: rgb(49, 51, 85);
+    --shadowDark: #D9DDE6;
+    --shadowLight: #EFF5FE;
+    --primary: #021523;
+    --danger: #EF5734;
+    --info: #33CC99;
+    --grey: #8E8E8E;
+    --grey-ligth: #CEC8C8;
+    --dark: #000000;
+    --white: #FFFFFF;
+    --morado: rgb(93, 98, 163);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+    /* background-color: none; */
+}
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+    background: rgb(0, 136, 255);
+    background: linear-gradient(0deg, rgba(93, 98, 163, 1) 0%, rgb(0, 136, 255) 70%, rgb(0, 149, 255) 100%);
+    color: var(--textDark);
+}
+
+input {
+    background: var(--shadowDark) !important;
+}
+
+form {
+    margin-bottom: 1rem;
+}
+
+.is-primary {
+    background: var(--morado) !important;
+    border-color: var(--white) !important;
+}
+
+.limitado {
+    width: 33%;
+    margin: 0 auto;
+}
+
+.login {
+    border-radius: 25px;
+    padding: 1.5rem;
+    box-shadow: 8px 8px 15px var(--shadowDark), -8px -8px 15px var(--shadowLight);
+}
+
+.field:not(:last-child) {
+    margin-bottom: 1rem;
+}
+
+.register {
+    margin-top: 10rem;
+    background: white;
+    border-radius: 10px;
+}
+
+.left,
+.right {
+    padding: 4.5rem;
+}
+
+.left {
+    border-right: 5px solid var(--background);
+}
+
+@media (max-width: 768px) {
+    .left {
+        border-right: none;
+    }
+}
+
+.left .title {
+    font-weight: 800;
+    letter-spacing: -2px;
+}
+
+.left .colored {
+    color: var(--brandColor);
+    font-weight: 500;
+    margin-top: 1rem !important;
+    letter-spacing: -1px;
+}
+
+.left p {
+    color: var(--textLight);
+    font-size: 1.15rem;
+}
+
+.right .title {
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.right .description {
+    margin-top: 1rem;
+    margin-bottom: 1rem !important;
+    color: var(--textLight);
+    font-size: 1.15rem;
+}
+
+.right small {
+    color: var(--textLight);
+}
+
+input {
+    font-size: 1rem;
+}
+
+input:focus {
+    border-color: var(--brandColor) !important;
+    box-shadow: 0 0 0 1px var(--brandColor) !important;
+}
+
+.fab,
+.fas {
+    color: var(--textLight);
+    margin-right: 1rem;
+}
+
+
+/* Class canvasjs */
+
+#backButton {
+    border-radius: 4px;
+    padding: 8px;
+    border: none;
+    font-size: 16px;
+    background-color: #2eacd1;
+    color: white;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.invisible {
+    display: none;
+}
+
+.canvasjs-chart-credit {
+    display: none !important;
+}

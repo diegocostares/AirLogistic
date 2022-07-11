@@ -1,0 +1,7 @@
+ErrorDocument 400 /views/errors/bad_request.php
+ErrorDocument 401 /views/errors/unauthorized.php
+ErrorDocument 403 /views/errors/forbidden.php
+ErrorDocument 404 /views/errors/not_found.php
+ErrorDocument 406 /views/errors/unacceptable.php
+ErrorDocument 422 /views/errors/unprocessable.php
+ErrorDocument 500 /views/errors/internal_server_error.php

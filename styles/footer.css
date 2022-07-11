@@ -1,0 +1,72 @@
+/* ---------- Pie de Pagina ---------- */
+
+
+/* HACEMOS QUE EL FOOTER SE AJUSTE EN ANCHO */
+
+footer {
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    position: relative;
+}
+
+.footerpropio {
+    background-color: var(--blue-background);
+    color: #fff !important;
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    position: relative;
+    left: 0;
+    bottom: 0;
+}
+
+.footerpropio .grupo-1 {
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    padding: 45px 0px;
+    color: #fff;
+}
+
+.footerpropio .grupo-1 figure {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footerpropio .grupo-1 figure img {
+    width: 200px;
+}
+
+.footerpropio .grupo-1 h2 {
+    margin-bottom: 25px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.footerpropio .grupo-1 p {
+    color: #fff !important;
+    text-align: center;
+}
+
+.footerpropio .grupo-2 {
+    background-color: var(--blue);
+    padding: 10px 10%;
+    text-align: center;
+    color: #fff;
+}
+
+.footerpropio .grupo-2 small {
+    font-size: 15px;
+}
+
+@media screen and (max-width:800px) {
+    .footerpropio .grupo-1 {
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 30px;
+        padding: 35px 0px;
+    }
+}

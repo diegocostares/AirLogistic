@@ -1,0 +1,64 @@
+# ---------------------Python------------------
+__pycache__/
+*.pyc 
+*.pyo
+*.pyd 
+*.py[cod]
+*$py.class
+
+# ---------------------Visual Studio------------------
+*.vscode
+*_i.c
+*_p.c
+*_h.h
+*.ilk
+*.meta
+*.obj
+*.iobj
+*.pch
+*.pdb
+*.ipdb
+*.pgc
+*.pgd
+*.rsp
+*.sbr
+*.tlb
+*.tli
+*.tlh
+*.tmp
+*.tmp_proj
+*_wpftmp.csproj
+*.log
+*.tlog
+*.vspscc
+*.vssscc
+.builds
+*.pidb
+*.svclog
+*.scc
+
+# ---------------SQL Server files------------
+*.mdf
+*.ldf
+*.ndf
+
+# ---------------Jupyter notebooks------------
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+# ---------------Interfaces gráficas-----------
+*.idea
+
+# --------------Sistemas operativos------------
+*.DS_STORE
+
+
+# ----------------EXTRAS----------------------
+*.sh
+.bash_logout
+.bashrc
+.cache/
+.gitconfig
+.profile
+.ssh/
+
