@@ -26,6 +26,39 @@ El desarrollo conto con metodologias agiles como **Scrum** y **Kanban** para el 
 
 La aplicasion maneja dos bases de datos ubicadas en el mismo servidor que se nos facilito con un simple acceso **ssh** o con el uso de **FileZilla**. Y utilizamos procedimientos almacenados para la manipulacion de los datos.
 
+### Diagramas
+<details>
+  <summary><b><samp> :book: &nbsp;Diagramas</samp></b></summary>
+  <br/>
+  
+  <img width="1280" src="https://github.com/diegocostares/AirLogistic/blob/main/assets/Diagrama.png">
+
+  <img width="1280"  src="https://github.com/diegocostares/AirLogistic/blob/main/assets/diagrama_ER-Entregable_%20M%20E_R%20Solo%20Atributos2.png">
+  
+</details>
+
+### Capturas de pantalla
+<details>
+  <summary><b><samp> :computer: &nbsp;Pagina web</samp></b></summary>
+  <br/>
+  
+  <img width="1280" src="https://github.com/diegocostares/AirLogistic/blob/main/assets/web1.png">
+
+  <img width="1280" src="https://github.com/diegocostares/AirLogistic/blob/main/assets/web2.png">
+  
+  <img width="1280" src="https://github.com/diegocostares/AirLogistic/blob/main/assets/web3.png">
+
+  <img width="1280"  src="https://github.com/diegocostares/AirLogistic/blob/main/assets/web4.png">
+  
+  <img width="1280"  src="https://github.com/diegocostares/AirLogistic/blob/main/assets/web5.png">
+  
+</details>
+
+<br><br><br>
+
+---
+
+# Explicaciones tecnicas y mas
 
 ## Contraseñas login :lock:
 
