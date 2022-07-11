@@ -18,11 +18,20 @@
 
 La app está disponible en el siguiente [link](https://codd.ing.puc.cl/~grupo47).
 
+## Explicación del proyecto
+
+Esta es una pagina web desarrollada en el curso de **Bases de Datos** en el cual se trabajo con **php** en un servidor asignado por los profesores.
+
+El desarrollo conto con metodologias agiles como **Scrum** y **Kanban** para el desarrollo del proyecto grupal. Y se utilizó **GitHub** para el control de versiones.
+
+La aplicasion maneja dos bases de datos ubicadas en el mismo servidor que se nos facilito con un simple acceso **ssh** o con el uso de **FileZilla**. Y utilizamos procedimientos almacenados para la manipulacion de los datos.
+
+
 ## Contraseñas login :lock:
 
-Para acceder directamente a esto se debe clickear en el botón _'Importar Usuarios'_ en la barra superior de navegación (Se recomienda una visualización al 90% para una mejor visualización :smile:). En dicha página, para la comodidad de quien este revisando, se han dispuesto todos los usuarios importados, en conjunto con sus credenciales y otros datos relevantes que exponen mejor el proceso y su resultado.
+Para acceder directamente a esto se debe clickear en el botón _'Importar Usuarios'_ en la barra superior de navegación. En dicha página, para la comodidad de quien este revisando, se han dispuesto todos los usuarios importados, en conjunto con sus credenciales y otros datos relevantes que exponen mejor el proceso y su resultado.
 
-Es importante señalar, que presionar el botón implica que el procedimiento almacenado denominado `importar_usuarios.sql` se ejecuta y la tabla usuarios, que se asume previamente creada _(Segun [issue#301](https://github.com/IIC2413/Syllabus-2022-1/issues/331); desde la bdd con `"\i usuarios.sql"`, disponible en la carpeta Entrega3)_, se pobla verificando alguna preexistencia de los usuarios de cada tipo. Donde, de verificar alguna existencia, no vuelve a poblar la tabla, lo cual lo pueden checkear clickeando nuevamente sobre el botón _'Importar Usuarios'_ viendo que les vuelven a aparecer las mismas credenciales.
+Es importante señalar, que presionar el botón implica que el procedimiento almacenado denominado `importar_usuarios.sql` se ejecuta y la tabla usuarios, que se asume previamente creada, se pobla verificando alguna preexistencia de los usuarios de cada tipo. Donde, de verificar alguna existencia, no vuelve a poblar la tabla, lo cual lo pueden checkear clickeando nuevamente sobre el botón _'Importar Usuarios'_ viendo que les vuelven a aparecer las mismas credenciales.
 
 ### Sobre la asignación de contraseñas :key:
 
@@ -46,21 +55,7 @@ Respecto a como se solicita esta explicación en el enuncuado, se asumió que _p
 
 - Se intentó realizar un manejo de errores personalizado mediante la creación de vistas para los errores 400, 401, 403, 404, 406, 422, 500. Estas vistas se encuentran en la carpeta `Sites/views/errors`, y se pueden ver en el siguiente [link](https://codd.ing.puc.cl/~grupo47/Sites/views/errors/bad_request.php). Esto se intentó configurar con el archivo `.htaccess`, pero no se logró debido a las configuraciones predeterminadas del servidor del curso. Sin embargo, en caso de que se hubiera creado un servidor propio, funcionaria.
 
-## Suposiciones y aclaraciones útiles para la corrección :speech_balloon:
-
-En general, creemos haber implementado una navegación eficiente, fluida e intuitiva, por lo que consideramos que no es necesario reparar o hacer enfasis en algún funcionamiento o pasos a seguir en particular para acceder a algun página o ejecutar algún proceso.
-
-### Importar Usuarios :busts_in_silhouette:
-
-En nuestro caso no tuvimos problemas en la creación de usuario alguno. Si bien en la rúbrica se pide avisar en caso de tener problemas, decidimos también avisar en pantalla en la en página de usuarios importados (`usuarios_importados.php`) cuando todos los usuarios, es decir de los tres tipos, son creados correctamente.
-
-### Sobre la denominación del tipo de cada usuario en entidad usuarios :card_index:
-
-- Admin: Se sigue lo señalado en el enunciado ("Admin DGAC")
-- Compañia Aérea: Queda como "compania"
-- Pasajeros: Queda como "pasajero"
-
-### Sobre archivos .sql en carpeta Entrega3 :file_folder:
+### Sobre archivos .sql :file_folder:
 
 - `usuarios.sql`: crea tabla usuarios en base de datos grupo 47.
 - `random_int.sql`: crea un número aleatorio entre los números entregados como input
@@ -70,7 +65,6 @@ En nuestro caso no tuvimos problemas en la creación de usuario alguno. Si bien 
 - `verify_flights.sql`: Busca verificar si el vuelo existe en la base de datos. Se consideraron dos casos: Primero, el nuevo vuelo, ya sea su fecha de llegada o salida, está entre las fechas de llegada y salida de algún vuelo pre-existente.(estos son los primeros dos "(Condicion 1 AND Condicion 2)"). Segundo, el nuevo vuelo, es decir su fecha de llegada y salida, contiene entre medio a algún vuelo pre-existente.
 - `reserva.sql`: Procedimiento almacenado que genera la reserva.
 
-El orden anterior se basa en lo señalado como válido en la [issue#321](https://github.com/IIC2413/Syllabus-2022-1/issues/321)
 
 ### Sobre manejo de bases de datos en Admin :bar_chart:
 
@@ -99,55 +93,3 @@ Las propuestas de vuelo que observa el **Admin** provienen de la base de datos p
     - No se ejecuta la reserva a menos que todos y cada uno de los pasaportes ingresados sean válidos, es decir, en el caso de ingresar 3 pasaportes con 2 válidos + 1 inválido la reserva no se llevara a cabo y por lo tanto la base de datos no será modificada.
 
     - A su vez, la reserva se ejecutara si y solo todos y cada une de les usuaries no presenta topes temporales con otros vuelos
-
-
-
-# Checklist rúbrica E3
-_Esto lo incluimos para ayudar al ayudante corrector y para mantener un buen flujo de desarrollo._
-```
-❌ : NO implementado
-✅ : Implementado
-🟠 : Implementado a medias
-❓ : Depende del ayudante
-```
-
-* **(18 pts) Usuarios y Login**
-    * **(6 pts) Login:**
-        - ✅ (1 pto) Tipo DGAC 
-        - ✅ (1 pto) Tipo Pasajero
-        - ✅ (1 pto) Tipo Aerolinea
-        - ✅ (1 pto) Campos necesarios
-        - ✅ (2 ptos) Manejo de cierre de sesión.
-
-    * **(12 pts total) Importación de usuarios:** 
-        - ✅ (1 pto) Tipo de archivo correspondiente
-        - ✅ (1 pts) Crea el tipo DGAC y verifica si es que el usuario ya existe
-        - ✅ (2 pts) Crear usuarios del tipo compañía aérea y verifica
-        - ✅ (1 pto) Crear contraseñas _aleatorias_ a los usuarios del tipo compañía aerea.
-        - ✅ (2 pts) Crear usuarios del tipo pasajero y verifica
-        - ✅ (2 pts) Agrega una contraseña a los usuarios de tipo pasajero
-        - ✅ (2 pts) En caso de que no se puedan importar un usuario se muestra un mensaje
-        - ✅ (1 pto) Accede a la funcion desde la pagina principal.
-
-* **(30 pts) Información personal y Navegación:**
-    * **(15 pts) Usuario DGAC:**
-        - ✅ (1 pto) Vista principal:
-        - ✅ (4 pts) Listado de propuestas de vuelo:
-        - ✅ (6 pts) Aceptación/Rechazo de propuestas:
-        - ✅ (4 pts) Filtro por fecha:
-    * **(5 pts) Usuario Compañía aérea:**
-        - ✅ (3pts) Vista principal:
-        - ✅ (2pts) Listas de vuelos
-    * **(10 pts) Usuario Pasajero**
-        - ✅ (4 pts) Vista principal
-        - ✅ (3 pts) Página/Sección de búsqueda de vuelos:
-        - ✅ (3 pts) Sección de vuelo:
-        - ✅ Función de reserva:
-
-* **(22 pts) Procedimiento Almacenado:** 
-    * 🟠 (8 pts) Definición de archivos
-    * 🟠 (14 pts) Funcionamiento web
-
-* **✅ (5 pts) Funcionalidad Adicional:** 
-
-* ❓**Bonus (hasta 5 décimas) Por navegación sobresaliente:** 
